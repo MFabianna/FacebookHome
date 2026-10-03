@@ -1,51 +1,48 @@
 # 📘 Facebook Home Clone - React Native
 
-Ce projet est une reproduction de l'interface d'accueil de l'application Facebook, développée avec **React Native** et **Expo**. Il a été réalisé dans le cadre d'un TP universitaire pour mettre en pratique les concepts fondamentaux du développement mobile (composants, props, state, navigation, et gestion des événements).
+Ce projet est une reproduction complète et fonctionnelle de l'interface d'accueil de l'application Facebook, développée avec **React Native** et **Expo**. Il a été réalisé dans le cadre d'un TP universitaire pour mettre en pratique les concepts fondamentaux du développement mobile.
 
-##  Fonctionnalités
+## 🌟 Fonctionnalités
 
-### 🎯 Fonctionnalités Obligatoires (Conformes au TP)
+### ✅ Fonctionnalités Obligatoires (Conformes au TP)
 - **Architecture modulaire** : Organisation stricte en dossiers `components/` et `screens/`.
 - **Header** : Logo et 3 boutons d'action (Ajouter, Recherche, Menu).
 - **Bottom Navigation** : 6 icônes avec gestion de l'état actif (icône bleue/grise).
-- **CreatePost** : Zone de création de publication avec avatar et input flexible.
-- **Stories** : Défilement horizontal d'au moins 5 stories générées dynamiquement via `.map()`.
+- **CreatePost** : Zone de création avec avatar et input flexible.
+- **Stories** : Défilement horizontal de 5 stories générées dynamiquement via `.map()`.
 - **Publications (Feed)** : 10 posts générés dynamiquement via `.map()` et `props`.
 - **Interactions** : Boutons J'aime, Commenter et Partager.
 - **Gestion d'état** : Utilisation de `useState` pour les interactions.
-- **Authentification** : Écran de connexion (Login) et déconnexion fonctionnelle via le menu.
 
-###  Défis Supplémentaires (Partie 13 du PDF)
+### 🚀 Défis Supplémentaires & Bonus (Partie 13)
 1. **Compteur de likes dynamique** : Incrémentation (+1) et décrémentation (-1) en temps réel.
-2. **Réactions Facebook** : Menu de réactions (J'aime, J'adore, Haha, Wouah, Triste, Grrr) affiché au **appui long** sur le bouton J'aime.
-3. **Zone de commentaires** : Apparition d'un champ de saisie au clic sur "Commenter".
-4. **Message de partage** : Alerte de confirmation au clic sur "Partager".
-5. **Navigation active** : L'icône sélectionnée dans la barre du bas change de couleur.
+2. **Réactions Facebook** : Menu de 7 réactions (J'aime, J'adore, Care, Haha, Wouah, Triste, Grrr) affiché au **appui long** sur le bouton J'aime.
+3. **Zone de commentaires réaliste** : Apparition d'un champ de saisie avec bouton d'envoi. Les commentaires s'ajoutent avec la photo de profil et le compteur augmente.
+4. **Menu de partage (Bottom Sheet)** : Menu glissant en bas de l'écran avec plusieurs options de partage.
+5. **Stories cliquables** : Ouverture des stories en plein écran dans un Modal.
+6. **Authentification** : Écran de connexion (Login) et déconnexion fonctionnelle via le menu.
 
 ## 🛠️ Technologies utilisées
-
 - **React Native** (Framework mobile)
-- **Expo** (Outil de développement et build)
-- **JavaScript** (Langage de programmation)
-- **@expo/vector-icons** (Pour les icônes Ionicons)
+- **Expo** (Outil de développement)
+- **JavaScript** (ES6+)
+- **@expo/vector-icons** (Ionicons)
 
-## 📂 Architecture du projet
-
-Conformément à la Partie 14 du guide de TP, voici la structure finale du projet :
-
+##  Architecture du projet
+Conformément à la Partie 14 du guide de TP :
 ```text
 FacebookHome/
 ├── assets/
 ├── components/
-│   ├── BottomNavigation.js   # Barre de navigation inférieure
-│   ├── CreatePost.js         # Zone "À quoi pensez-vous ?"
-│   ├── Header.js             # En-tête avec logo et boutons
-│   ├── PostCard.js           # Composant unitaire d'une publication
-│   ├── Posts.js              # Liste des 10 publications
-│   ├── StoryCard.js          # Composant unitaire d'une story
-│   └── Stories.js            # Liste des stories + Viewer
+│   ├── BottomNavigation.js   
+│   ├── CreatePost.js         
+│   ├── Header.js             
+│   ├── PostCard.js           
+│   ├── Posts.js              
+│   ├── StoryCard.js          
+│   └── Stories.js            
 ├── screens/
-│   ├── HomeScreen.js         # Écran principal assemblant les composants
-│   └── Login.js              # Écran de connexion
-├── App.js                    # Point d'entrée de l'application
-└── package.json              # Dépendances du projet
+│   ├── HomeScreen.js         
+│   └── Login.js              
+├── App.js                    
+└── package.json              
