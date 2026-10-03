@@ -4,7 +4,7 @@ Ce projet est une reproduction de l'interface d'accueil de l'application Faceboo
 
 ##  Fonctionnalités
 
-### 🎯 Fonctionnalités du TP (Obligatoires)
+### 🎯 Fonctionnalités Obligatoires (Conformes au TP)
 - **Architecture modulaire** : Organisation stricte en dossiers `components/` et `screens/`.
 - **Header** : Logo et 3 boutons d'action (Ajouter, Recherche, Menu).
 - **Bottom Navigation** : 6 icônes avec gestion de l'état actif (icône bleue/grise).
@@ -13,15 +13,14 @@ Ce projet est une reproduction de l'interface d'accueil de l'application Faceboo
 - **Publications (Feed)** : 10 posts générés dynamiquement via `.map()` et `props`.
 - **Interactions** : Boutons J'aime, Commenter et Partager.
 - **Gestion d'état** : Utilisation de `useState` pour les interactions.
-
-### 🚀 Fonctionnalités Bonus (Réalisme & Défis)
 - **Authentification** : Écran de connexion (Login) et déconnexion fonctionnelle via le menu.
-- **Réactions Facebook** : Menu flottant au **appui long** sur le bouton J'aime (J'aime, J'adore, Care, Haha, Wouah, Triste, Grrr).
-- **Compteur de likes dynamique** : Incrémentation et décrémentation en temps réel.
-- **Zone de commentaires** : Apparition d'un champ de saisie au clic sur "Commenter".
-- **Story Viewer** : Ouverture des stories en plein écran avec **swipe horizontal** (gauche/droite).
-- **Écran de Profil** : Page dédiée avec photo de couverture, détails personnels et liste d'amis.
-- **Images cliquables** : Interaction sur les images des posts et des stories.
+
+###  Défis Supplémentaires (Partie 13 du PDF)
+1. **Compteur de likes dynamique** : Incrémentation (+1) et décrémentation (-1) en temps réel.
+2. **Réactions Facebook** : Menu de réactions (J'aime, J'adore, Haha, Wouah, Triste, Grrr) affiché au **appui long** sur le bouton J'aime.
+3. **Zone de commentaires** : Apparition d'un champ de saisie au clic sur "Commenter".
+4. **Message de partage** : Alerte de confirmation au clic sur "Partager".
+5. **Navigation active** : L'icône sélectionnée dans la barre du bas change de couleur.
 
 ## 🛠️ Technologies utilisées
 
@@ -32,20 +31,21 @@ Ce projet est une reproduction de l'interface d'accueil de l'application Faceboo
 
 ## 📂 Architecture du projet
 
+Conformément à la Partie 14 du guide de TP, voici la structure finale du projet :
+
 ```text
 FacebookHome/
 ├── assets/
 ├── components/
-│   ├── Header.js           # En-tête avec logo et boutons
-│   ├── BottomNavigation.js # Barre de navigation inférieure
-│   ├── CreatePost.js       # Zone "À quoi pensez-vous ?"
-│   ├── StoryCard.js        # Composant unitaire d'une story
-│   ├── Stories.js          # Liste des stories + Viewer plein écran
-│   ├── PostCard.js         # Composant unitaire d'une publication
-│   └── Posts.js            # Liste des 10 publications
+│   ├── BottomNavigation.js   # Barre de navigation inférieure
+│   ├── CreatePost.js         # Zone "À quoi pensez-vous ?"
+│   ├── Header.js             # En-tête avec logo et boutons
+│   ├── PostCard.js           # Composant unitaire d'une publication
+│   ├── Posts.js              # Liste des 10 publications
+│   ├── StoryCard.js          # Composant unitaire d'une story
+│   └── Stories.js            # Liste des stories + Viewer
 ├── screens/
-│   ├── HomeScreen.js       # Écran principal assemblant les composants
-│   ├── Login.js            # Écran de connexion
-│   └── ProfileScreen.js    # Écran de profil utilisateur
-├── App.js                  # Point d'entrée de l'application
-└── package.json            # Dépendances du projet
+│   ├── HomeScreen.js         # Écran principal assemblant les composants
+│   └── Login.js              # Écran de connexion
+├── App.js                    # Point d'entrée de l'application
+└── package.json              # Dépendances du projet
